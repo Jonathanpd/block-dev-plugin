@@ -8,5 +8,8 @@
     "description": "Adds a header with a hover effect",
     "keywords": ["header", "underline", "hover"],
     "version": "1",
-    "textdomain": "block-dev-plugin"
+    "textdomain": "block-dev-plugin",
+    "editorScript": "file:./index.js",
+    "viewScript": "",
+    "script": ""
 }
