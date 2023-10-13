@@ -4,7 +4,6 @@
   "name": "block-dev-plugin/search-form",
   "title": "Search Form",
   "category": "widgets",
-  "icon": "star-filled",
   "description": "Adds a search form",
   "keywords": [
     "search form"
