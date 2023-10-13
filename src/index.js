@@ -2,11 +2,14 @@ import { registerBlockType } from '@wordpress/blocks'
 import { RichText, useBlockProps } from "@wordpress/block-editor"
 import { __ } from "@wordpress/i18n"
 import block from './block.json'
+import './main.css'
 
 registerBlockType(block.name, {
     edit({ attributes, setAttributes }) {
         const { content } = attributes
-        const blockProps = useBlockProps()
+        const blockProps = useBlockProps({
+            className: 'fancy-header'
+        })
 
         return (
             <RichText
@@ -20,7 +23,9 @@ registerBlockType(block.name, {
     },
     save({ attributes }) {
         const { content } = attributes
-        const blockProps = useBlockProps.save()
+        const blockProps = useBlockProps.save({
+            className: 'fancy-header'
+        })
 
         return (
             <RichText.Content

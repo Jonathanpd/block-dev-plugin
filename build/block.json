@@ -18,5 +18,7 @@
     "content": {
       "type": "string"
     }
-  }
+  },
+  "editorStyle": "",
+  "style": "file:./index.css"
 }
