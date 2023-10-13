@@ -209,10 +209,17 @@ __webpack_require__.r(__webpack_exports__);
     attributes
   }) {
     const {
-      content
+      content,
+      underline_color
     } = attributes;
     const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
-      className: 'fancy-header'
+      className: 'fancy-header',
+      style: {
+        'background-image': `
+                    linear-gradient(transparent, transparent),
+                    linear-gradient(${underline_color}, ${underline_color})
+                `
+      }
     });
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
       ...blockProps,

@@ -43,9 +43,15 @@ registerBlockType(block.name, {
         )
     },
     save({ attributes }) {
-        const { content } = attributes
+        const { content, underline_color } = attributes
         const blockProps = useBlockProps.save({
-            className: 'fancy-header'
+            className: 'fancy-header',
+            style: {
+                'background-image': `
+                    linear-gradient(transparent, transparent),
+                    linear-gradient(${underline_color}, ${underline_color})
+                `
+            }
         })
 
         return (
