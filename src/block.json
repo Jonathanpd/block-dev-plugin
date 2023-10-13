@@ -10,6 +10,9 @@
     "version": "1",
     "textdomain": "block-dev-plugin",
     "editorScript": "file:./index.js",
-    "viewScript": "",
-    "script": ""
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    }
 }
