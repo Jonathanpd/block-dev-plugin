@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "block-dev-plugin/search-form",
+  "title": "Search Form",
+  "category": "widgets",
+  "icon": "star-filled",
+  "description": "Adds a search form",
+  "keywords": [
+    "search form"
+  ],
+  "version": "1",
+  "textdomain": "block-dev-plugin",
+  "editorScript": "file:./index.js",
+  "attributes": {},
+  "style": "file:./index.css"
+}
