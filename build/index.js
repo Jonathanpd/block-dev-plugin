@@ -70,7 +70,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"block-dev-plugin/fancy-header","title":"Fancy Header","category":"text","icon":"star-filled","description":"Adds a header with a hover effect","keywords":["header","underline","hover"],"version":"1","textdomain":"block-dev-plugin","editorScript":"file:./index.js","attributes":{"content":{"type":"string"}},"style":"file:./index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"block-dev-plugin/fancy-header","title":"Fancy Header","category":"text","icon":"star-filled","description":"Adds a header with a hover effect","keywords":["header","underline","hover"],"version":"1","textdomain":"block-dev-plugin","editorScript":"file:./index.js","attributes":{"content":{"type":"string"},"underline_color":{"type":"string","default":"#f87171"}},"style":"file:./index.css"}');
 
 /***/ })
 
@@ -174,12 +174,25 @@ __webpack_require__.r(__webpack_exports__);
     setAttributes
   }) {
     const {
-      content
+      content,
+      underline_color
     } = attributes;
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Colors', 'block-dev-plugin')
-    }, "Dummy Content")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ColorPalette, {
+      colors: [{
+        name: 'Red',
+        color: '#f87171'
+      }, {
+        name: 'Indigo',
+        color: '#818cf8'
+      }],
+      value: underline_color,
+      onChange: newVal => setAttributes({
+        underline_color: newVal
+      })
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       ...blockProps
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
       className: "fancy-header",
