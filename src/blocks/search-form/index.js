@@ -11,7 +11,12 @@ registerBlockType(block.name, {
     icon: icons.primary,
     edit({ attributes, setAttributes }) {
       const { bgColor, textColor } = attributes
-      const blockProps = useBlockProps()
+      const blockProps = useBlockProps({
+        style: {
+          'background-color': bgColor,
+          color: textColor
+        }
+      })
 
       return (
         <>
@@ -37,7 +42,15 @@ registerBlockType(block.name, {
             <form>
               <input type="text" placeholder="Search" />
               <div className="btn-wrapper">
-                <button type="submit">Search</button>
+                <button
+                  type="submit"
+                  style={{
+                    'background-color': bgColor,
+                    color: textColor
+                  }}
+                >
+                  Search
+                </button>
               </div>
             </form>
           </div>
