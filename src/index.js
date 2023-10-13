@@ -17,6 +17,10 @@ registerBlockType(block.name, {
                     placeholder={ __( 'Heading...', 'block-dev-plugin' ) }
                     value={ content }
                     onChange={newVal => setAttributes( { content: newVal } ) }
+                    allowedFormats={[
+                        'core/bold',
+                        'core/italic'
+                    ]}
                 />
             </div>
         )
@@ -38,7 +42,6 @@ registerBlockType(block.name, {
 });
 
 /* 
-allowedFormats={ [ 'core/bold', 'core/italic' ] }
 console.log(blockProps)
 id={blockProps.id}
 role={blockProps.role}

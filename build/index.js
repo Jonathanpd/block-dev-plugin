@@ -173,7 +173,8 @@ __webpack_require__.r(__webpack_exports__);
       value: content,
       onChange: newVal => setAttributes({
         content: newVal
-      })
+      }),
+      allowedFormats: ['core/bold', 'core/italic']
     }));
   },
   save({
@@ -194,7 +195,6 @@ __webpack_require__.r(__webpack_exports__);
 });
 
 /* 
-allowedFormats={ [ 'core/bold', 'core/italic' ] }
 console.log(blockProps)
 id={blockProps.id}
 role={blockProps.role}
