@@ -15,9 +15,25 @@ registerBlockType(block.name, {
                 onChange={newVal => setAttributes( { content: newVal } ) }
             />
         )
+    },
+    save({ attributes }) {
+        const { content } = attributes
+
+        return (
+            <RichText.Content
+                tagName="h2"
+                value={ content }
+            />
+        )
     }
 });
 
 /* 
 allowedFormats={ [ 'core/bold', 'core/italic' ] }
  */
+
+/*
+<!-- wp:block-dev-plugin/fancy-header {"content":"Teste h2"} -->
+<h2>Teste h2</h2>
+<!-- /wp:block-dev-plugin/fancy-header -->
+*/

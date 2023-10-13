@@ -157,12 +157,29 @@ __webpack_require__.r(__webpack_exports__);
         content: newVal
       })
     });
+  },
+  save({
+    attributes
+  }) {
+    const {
+      content
+    } = attributes;
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+      tagName: "h2",
+      value: content
+    });
   }
 });
 
 /* 
 allowedFormats={ [ 'core/bold', 'core/italic' ] }
  */
+
+/*
+<!-- wp:block-dev-plugin/fancy-header {"content":"Teste h2"} -->
+<h2>Teste h2</h2>
+<!-- /wp:block-dev-plugin/fancy-header -->
+*/
 }();
 /******/ })()
 ;
