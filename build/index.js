@@ -60,7 +60,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"block-dev-plugin/fancy-header","title":"Fancy Header","category":"text","icon":"star-filled","description":"Adds a header with a hover effect","keywords":["header","underline","hover"],"version":"1","textdomain":"block-dev-plugin","editorScript":"file:./index.js","attributes":{"content":{"type":"string"}},"editorStyle":"","style":"file:./index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"block-dev-plugin/fancy-header","title":"Fancy Header","category":"text","icon":"star-filled","description":"Adds a header with a hover effect","keywords":["header","underline","hover"],"version":"1","textdomain":"block-dev-plugin","editorScript":"file:./index.js","attributes":{"content":{"type":"string"}},"style":"file:./index.css"}');
 
 /***/ })
 
@@ -163,18 +163,18 @@ __webpack_require__.r(__webpack_exports__);
     const {
       content
     } = attributes;
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      className: 'fancy-header'
-    });
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-      ...blockProps,
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      ...blockProps
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+      className: "fancy-header",
       tagName: "h2",
       placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Heading...', 'block-dev-plugin'),
       value: content,
       onChange: newVal => setAttributes({
         content: newVal
       })
-    });
+    }));
   },
   save({
     attributes
