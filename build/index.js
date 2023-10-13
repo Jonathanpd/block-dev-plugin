@@ -149,7 +149,9 @@ __webpack_require__.r(__webpack_exports__);
     const {
       content
     } = attributes;
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+      ...blockProps,
       tagName: "h2",
       placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Heading...', 'block-dev-plugin'),
       value: content,
@@ -164,7 +166,9 @@ __webpack_require__.r(__webpack_exports__);
     const {
       content
     } = attributes;
+    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+      ...blockProps,
       tagName: "h2",
       value: content
     });
@@ -173,6 +177,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* 
 allowedFormats={ [ 'core/bold', 'core/italic' ] }
+console.log(blockProps)
+id={blockProps.id}
+role={blockProps.role}
  */
 
 /*

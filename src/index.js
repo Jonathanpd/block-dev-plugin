@@ -1,14 +1,16 @@
 import { registerBlockType } from '@wordpress/blocks'
-import { RichText } from "@wordpress/block-editor"
+import { RichText, useBlockProps } from "@wordpress/block-editor"
 import { __ } from "@wordpress/i18n"
 import block from './block.json'
 
 registerBlockType(block.name, {
     edit({ attributes, setAttributes }) {
         const { content } = attributes
+        const blockProps = useBlockProps()
 
         return (
             <RichText
+                {...blockProps}
                 tagName="h2"
                 placeholder={ __( 'Heading...', 'block-dev-plugin' ) }
                 value={ content }
@@ -18,9 +20,11 @@ registerBlockType(block.name, {
     },
     save({ attributes }) {
         const { content } = attributes
+        const blockProps = useBlockProps.save()
 
         return (
             <RichText.Content
+                {...blockProps}
                 tagName="h2"
                 value={ content }
             />
@@ -30,6 +34,9 @@ registerBlockType(block.name, {
 
 /* 
 allowedFormats={ [ 'core/bold', 'core/italic' ] }
+console.log(blockProps)
+id={blockProps.id}
+role={blockProps.role}
  */
 
 /*
