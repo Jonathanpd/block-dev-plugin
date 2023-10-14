@@ -302,6 +302,34 @@ __webpack_require__.r(__webpack_exports__);
         color: textColor
       }
     }, "Search")))));
+  },
+  save({
+    attributes
+  }) {
+    const {
+      bgColor,
+      textColor
+    } = attributes;
+    const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
+      style: {
+        'background-color': bgColor,
+        color: textColor
+      }
+    });
+    return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      ...blockProps
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, "Search: Your search term here"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("form", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      placeholder: "Search"
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "btn-wrapper"
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+      type: "submit",
+      style: {
+        'background-color': bgColor,
+        color: textColor
+      }
+    }, "Search"))));
   }
 });
 }();

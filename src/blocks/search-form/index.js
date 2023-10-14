@@ -56,5 +56,34 @@ registerBlockType(block.name, {
           </div>
         </>
       )
+    },
+    save({ attributes }) {
+      const { bgColor, textColor } = attributes
+      const blockProps = useBlockProps.save({
+        style: {
+          'background-color': bgColor,
+          color: textColor
+        }
+      })
+
+      return (
+        <div {...blockProps}>
+          <h1>Search: Your search term here</h1>
+          <form>
+            <input type="text" placeholder="Search" />
+            <div className="btn-wrapper">
+              <button
+                type="submit"
+                style={{
+                  'background-color': bgColor,
+                  color: textColor
+                }}
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      )
     }
 })
