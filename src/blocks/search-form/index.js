@@ -5,7 +5,7 @@ import {
 import { __ } from "@wordpress/i18n"
 import block from './block.json'
 import icons from '../../icons'
-import './main.css'
+import './main.scss'
 
 registerBlockType(block.name, {
     icon: icons.primary,
